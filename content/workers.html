@@ -1,0 +1,35 @@
+<div class="row">
+	<div class="panel-body">
+		<table class="table-bordered">
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Apellidos P.</th>
+					<th>Apellido M.</th>
+					<th>Direcci&oacute;n</th>
+					<th>Tel&eacute;fono</th>
+					<th>Email</th>
+					<th>Foto</th>
+					<th>Acciones</th>
+				</tr>
+			</thead>
+			<tbody>
+            	<tr ng-repeat="worker in workers">
+            		<td>{{worker.nomtra}}</td>
+            		<td>{{worker.apepattra}}</td>
+            		<td>{{worker.apemattra}}</td>
+            		<td>{{worker.dirtra}}</td>
+            		<td>{{worker.teltra}}</td>
+            		<td>{{worker.emailtra}}</td>
+            		<td>{{worker.foto}}</td>
+            		<td>
+						<div class="pull-right action-buttons">
+							<a href="#!/edit/{{worker.id}}"><span class="glyphicon glyphicon-pencil"></span></a>
+							<a ng-click="remove(worker.id)" class="trash"><span class="glyphicon glyphicon-trash"></span></a>
+						</div>
+					</td>
+            	</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
